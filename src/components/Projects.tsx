@@ -5,26 +5,34 @@ import { Github, ExternalLink, ShieldAlert, BrainCircuit, Workflow, Globe } from
 
 const projects = [
   {
-    title: 'Tokenization DApp',
-    description: 'A sophisticated decentralized application for asset tokenization, built on blockchain technology (Ethereum/Hedera). Focusing on secure, transparent transactions in the fintech domain.',
+    title: 'AI Smart Trading',
+    description: 'A high-fidelity Proof of Concept (POC) designed for institutional users within the ** Technology Center** ecosystem. It provides a secure gateway for managing digital assets, funding wallets, and performing asset swaps via the Third Party Exchange and ** Blockchain**..',
     icon: Globe,
-    tags: ['Web3', 'Blockchain', 'Solidity', 'React'],
-    github: '#',
+    tags: ['Gemini AI ', 'Blockchain', 'Python Modular Architecture', 'Streamlit '],
+    github: 'https://github.com/Lucky-2089/DAP_Trading_AI.git',
+    demo: '#'
+  },
+{
+    title: 'Causal Impact Analyzer',
+    description: 'An AI-powered Causal Inference Analytics Dashboard built with Streamlit to estimate and visualize the impact of interventions using advanced causal machine learning models.',
+    icon: Workflow,
+    tags: ['Python', 'Panda', 'Numpy', 'EconML','Streamlit'],
+    github: 'https://github.com/Lucky-2089/causal-impact-analyzer.git',
+    demo: '#'
+  },
+{
+    title: 'Disaster Relief Volunteer Portal',
+    description: 'The Disaster Relief Volunteer Portal is a full-stack web application that enables users to submit help requests and volunteers to register and assist. The application supports offline-first functionality and can synchronize queued requests when back online. It is also responsive and PWA-ready for mobile usage.',
+    icon: BrainCircuit,
+    tags: ['React 18', 'PWA-ready', 'Node.js', 'SQLite '],
+    github: 'https://github.com/Lucky-2089/disaster-relief-app.git',
     demo: '#'
   },
   {
-    title: 'AI Smart Contract Validator',
+    title: 'Blockchain Smart Contract Validator',
     description: 'An AI-powered tool for automated validation and auditing of smart contracts. Leverages large language models (Gemini/LangChain) to identify security vulnerabilities and logic errors.',
     icon: BrainCircuit,
     tags: ['AI/ML', 'LangChain', 'Security', 'Automation'],
-    github: '#',
-    demo: '#'
-  },
-  {
-    title: 'Test Automation Frameworks',
-    description: 'Enterprise-grade automation frameworks for Lloyds Bank use case. Built with Playwright and Selenium, integrating AI-driven testing approaches to reduce maintenance and improve reliability.',
-    icon: Workflow,
-    tags: ['Playwright', 'Selenium', 'Java', 'AI-Driven'],
     github: '#',
     demo: '#'
   }
