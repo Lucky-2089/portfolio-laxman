@@ -66,25 +66,37 @@ export const Skills = () => {
             ))}
           </div>
 
-          <div className="h-[500px] glass border border-white/5 rounded-3xl p-8 relative">
-            <div className="absolute top-6 left-6 text-xl font-bold text-foreground opacity-50 uppercase tracking-tighter">
-              Proficiency <span className="text-primary">Matrix</span>
-            </div>
-            <ResponsiveContainer width="100%" height="100%">
-              <RadarChart cx="50%" cy="50%" outerRadius="80%" data={data}>
-                <PolarGrid stroke="#ffffff20" />
-                <PolarAngleAxis dataKey="subject" tick={{ fill: '#94a3b8', fontSize: 12, fontWeight: 600 }} />
-                <PolarRadiusAxis angle={30} domain={[0, 100]} tick={false} axisLine={false} />
-                <Radar
-                  name="Proficiency"
-                  dataKey="A"
-                  stroke="#3b82f6"
-                  fill="#3b82f6"
-                  fillOpacity={0.4}
-                />
-              </RadarChart>
-            </ResponsiveContainer>
-          </div>
+          <div className="h-[500px] bg-[#0f172a] border border-white/10 rounded-3xl p-8 relative shadow-2xl overflow-hidden">
+  {/* 1. Header: Pure White and Bold */}
+  <div className="absolute top-6 left-6 text-xl font-black text-white uppercase tracking-widest z-10">
+    Proficiency <span className="text-primary">Matrix</span>
+  </div>
+
+  <ResponsiveContainer width="100%" height="100%">
+    <RadarChart cx="50%" cy="50%" outerRadius="80%" data={data}>
+      {/* 2. Grid: Increased opacity for structure */}
+      <PolarGrid stroke="#ffffff30" />
+
+      {/* 3. Labels: Pure White (#ffffff) to beat the grey background */}
+      <PolarAngleAxis
+        dataKey="subject"
+        tick={{ fill: '#ffffff', fontSize: 14, fontWeight: 800 }}
+      />
+
+      <PolarRadiusAxis angle={30} domain={[0, 100]} tick={false} axisLine={false} />
+
+      {/* 4. Radar: Stronger blue fill to stand out */}
+      <Radar
+        name="Proficiency"
+        dataKey="A"
+        stroke="#3b82f6"
+        strokeWidth={3}
+        fill="#3b82f6"
+        fillOpacity={0.7}
+      />
+    </RadarChart>
+  </ResponsiveContainer>
+</div>
         </div>
       </div>
     </section>
