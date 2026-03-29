@@ -23,6 +23,9 @@ const skillsList = [
 ];
 
 export const Skills = () => {
+  // Check for mobile view to adjust font and radius dynamically
+  const isMobile = typeof window !== 'undefined' && window.innerWidth < 768;
+
   return (
     <section id="skills" className="py-24 relative">
       <div className="container mx-auto px-6">
@@ -42,7 +45,8 @@ export const Skills = () => {
         </motion.div>
 
         <div className="grid lg:grid-cols-2 gap-16 items-center">
-          <div className="grid sm:grid-cols-2 gap-6">
+          {/* Skills List Cards */}
+          <div className="grid sm:grid-cols-2 gap-6 order-2 lg:order-1">
             {skillsList.map((skill, i) => (
               <motion.div
                 key={i}
@@ -66,37 +70,45 @@ export const Skills = () => {
             ))}
           </div>
 
-          <div className="h-[500px] bg-[#0f172a] border border-white/10 rounded-3xl p-8 relative shadow-2xl overflow-hidden">
-  {/* 1. Header: Pure White and Bold */}
-  <div className="absolute top-6 left-6 text-xl font-black text-white uppercase tracking-widest z-10">
-    Proficiency <span className="text-primary">Matrix</span>
-  </div>
+          {/* Radar Chart Section */}
+          <div className="h-[450px] md:h-[550px] bg-[#0f172a] border border-white/10 rounded-3xl p-4 md:p-8 relative shadow-2xl overflow-hidden order-1 lg:order-2">
+            <div className="absolute top-6 left-6 text-xl font-black text-white uppercase tracking-widest z-10">
+              Proficiency <span className="text-primary">Matrix</span>
+            </div>
 
-  <ResponsiveContainer width="100%" height="100%">
-    <RadarChart cx="50%" cy="50%" outerRadius="80%" data={data}>
-      {/* 2. Grid: Increased opacity for structure */}
-      <PolarGrid stroke="#ffffff30" />
-
-      {/* 3. Labels: Pure White (#ffffff) to beat the grey background */}
-      <PolarAngleAxis
-        dataKey="subject"
-        tick={{ fill: '#ffffff', fontSize: 14, fontWeight: 800 }}
-      />
-
-      <PolarRadiusAxis angle={30} domain={[0, 100]} tick={false} axisLine={false} />
-
-      {/* 4. Radar: Stronger blue fill to stand out */}
-      <Radar
-        name="Proficiency"
-        dataKey="A"
-        stroke="#3b82f6"
-        strokeWidth={3}
-        fill="#3b82f6"
-        fillOpacity={0.7}
-      />
-    </RadarChart>
-  </ResponsiveContainer>
-</div>
+            <ResponsiveContainer width="100%" height="100%">
+              <RadarChart
+                cx="50%"
+                cy="55%"
+                outerRadius={isMobile ? "55%" : "75%"}
+                data={data}
+              >
+                <PolarGrid stroke="#ffffff30" />
+                <PolarAngleAxis
+                  dataKey="subject"
+                  tick={{
+                    fill: '#ffffff',
+                    fontSize: isMobile ? 10 : 13,
+                    fontWeight: 700,
+                  }}
+                />
+                <PolarRadiusAxis
+                  angle={30}
+                  domain={[0, 100]}
+                  tick={false}
+                  axisLine={false}
+                />
+                <Radar
+                  name="Proficiency"
+                  dataKey="A"
+                  stroke="#3b82f6"
+                  strokeWidth={3}
+                  fill="#3b82f6"
+                  fillOpacity={0.6}
+                />
+              </RadarChart>
+            </ResponsiveContainer>
+          </div>
         </div>
       </div>
     </section>

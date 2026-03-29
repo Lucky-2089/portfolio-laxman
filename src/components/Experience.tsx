@@ -21,14 +21,6 @@ const experiences = [
     tags: ['Mortgage', 'Insurance', 'Selenium', 'Java']
   },
   {
-    role: 'Senior Quality Assurance Engineer',
-    company: 'Livegage',
-    period: 'August 2022 - July 2024',
-    location: 'Navi Mumbai, Maharashtra, India',
-    description: 'Successfully delivered robust, compliant, and highly efficient software solutions meeting highest industry standards.',
-    tags: ['Quality Engineering', 'Postman', 'JMeter']
-  },
-  {
     role: 'Software Engineer',
     company: 'GREENITY SOFTWARE SOLUTIONS PRIVATE LIMITED',
     period: 'January 2014 - August 2022',
