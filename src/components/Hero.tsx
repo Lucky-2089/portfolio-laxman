@@ -20,12 +20,6 @@ export const Hero = () => {
         className="max-w-4xl mx-auto space-y-8"
       >
         <div className="flex justify-center">
-          <Badge
-            variant="outline"
-            className="px-4 py-2 text-sm font-medium tracking-wide text-primary glass-card animate-pulse"
-          >
-            AVAILABLE FOR NEW OPPORTUNITIES
-          </Badge>
         </div>
 
         <h1 className="text-6xl md:text-8xl font-black tracking-tighter text-foreground leading-none">
